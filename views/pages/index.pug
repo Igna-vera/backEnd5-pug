@@ -1,0 +1,22 @@
+html 
+    head
+        title='Lista de productos'
+    body
+        a(href='/') Agregar producto
+        h1='Lista de productos'
+        hr
+        if productosLista.length>0
+            table 
+                tr 
+                    th='#ID'
+                    th='Nombre'
+                    th='Precio'
+                    
+                for producto in productosLista
+                    tr
+                        td=producto.id
+                        td=producto.title
+                        td=producto.price
+                        
+        else 
+            h2='No hay productos '
